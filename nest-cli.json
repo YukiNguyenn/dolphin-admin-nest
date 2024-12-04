@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "compilerOptions": {
+    "assets": [
+      "**/*.css",
+      {
+        "include": "**/*.html",
+        "watchAssets": true
+      },
+      {
+        "include": "i18n/**/*",
+        "watchAssets": true
+      }
+    ],
+    "builder": "swc",
+    "deleteOutDir": true,
+    "manualRestart": true,
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "classValidatorShim": true,
+          "introspectComments": true,
+          "dtoFileNameSuffix": [".dto.ts", ".vo.ts"]
+        }
+      }
+    ],
+    "tsConfigPath": "tsconfig.build.json",
+    "typeCheck": true,
+    "watchAssets": false,
+    "webpackConfigPath": "webpack.config.js"
+  },
+  "entryFile": "main",
+  "generateOptions": {
+    "flat": false,
+    "spec": false
+  },
+  "sourceRoot": "src"
+}

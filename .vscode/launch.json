@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Nest",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "nest",
+      "args": ["start", "--watch"],
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
